@@ -18,7 +18,7 @@
                             src="assets/github.svg"
                             alt="github logo"
                         />
-                        <h1 class="name">braiancalot</h1>
+                        <h1 id="login" class="name">nome</h1>
                     </div>
 
                     <div class="main">
@@ -29,35 +29,35 @@
                                         src="assets/followers.svg"
                                         alt="followers logo"
                                     />
-                                    <p class="followers">55 Seguidores</p>
+                                    <p id="followers">Seguidores</p>
                                 </li>
                                 <li class="item">
                                     <img
                                         src="assets/following.svg"
                                         alt="following logo"
                                     />
-                                    <p class="following">55 Seguindo</p>
+                                    <p id="following">Seguindo</p>
                                 </li>
                                 <li class="item">
                                     <img
                                         src="assets/repository.svg"
                                         alt="repository logo"
                                     />
-                                    <p class="repository">10 Repositórios</p>
+                                    <p id="repositories">Repositórios</p>
                                 </li>
                                 <li class="item">
                                     <img
                                         src="assets/company.svg"
                                         alt="company logo"
                                     />
-                                    <p class="@company">@companhia</p>
+                                    <p id="company">@companhia</p>
                                 </li>
                                 <li class="item">
                                     <img
                                         src="assets/location.svg"
                                         alt="location logo"
                                     />
-                                    <p class="location">Localização</p>
+                                    <p id="local">Localização</p>
                                 </li>
                             </ul>
                         </div>
@@ -65,6 +65,7 @@
                             <img
                                 src="http://lorempixel.com.br/370/370"
                                 class="profile-image"
+                                id="profileImage"
                                 alt="profile image"
                             />
                         </div>
@@ -77,19 +78,25 @@
             </div>
         </main>
         <aside class="options-container">
-            <button class="button">
+            <label for="user" class="option-title">Pesquisar usuário:</label>
+            <div class="input-container">
+                <input
+                    type="text"
+                    name="user"
+                    class="input-user"
+                    placeholder="Informe o usuário"
+                    autocomplete="off"
+                />
+                <img
+                    src="assets/search.svg"
+                    alt="search icon"
+                    class="search-icon"
+                />
+            </div>
+            <div class="option-title">Customizar GitHubCard</div>
+            <button class="button btn-random">
                 <img src="assets/random.svg" alt="config name" />
                 Gerar Background
-            </button>
-
-            <button class="button">
-                <img src="assets/copy.svg" alt="config name" />
-                Copiar Card
-            </button>
-
-            <button class="button">
-                <img src="assets/download.svg" alt="config name" />
-                Baixar Card
             </button>
         </aside>
         <script src="script.js"></script>

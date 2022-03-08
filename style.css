@@ -34,13 +34,14 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
 }
 
 .share {
     color: var(--text);
     font-size: 1.25rem;
     margin-bottom: 10px;
+    margin-right: 72px;
 }
 
 .card-border {
@@ -61,13 +62,6 @@ body {
     width: 407px;
     height: 644px;
     border-radius: 50px;
-}
-
-.options-container {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
 }
 
 .header {
@@ -97,7 +91,7 @@ body {
 
 .info-list {
     width: 203px;
-    height: 194px;
+    min-height: 194px;
     background-color: rgba(0, 0, 0, 0.5);
     bottom: 0;
     border-radius: 50px;
@@ -131,8 +125,9 @@ body {
 }
 
 .profile-image {
+    width: 370px;
     border-radius: 50%;
-    border: 10px solid var(--img-profile);
+    box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.5);
     right: 500px;
     object-fit: fill;
 }
@@ -157,7 +152,44 @@ body {
 .options-container {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    justify-content: center;
+    gap: 20px;
+    width: 50%;
+    margin-left: 10%;
+}
+
+.option-title {
+    font-size: 1.25rem;
+    color: var(--text);
+}
+
+.input-container {
+    position: relative;
+    width: 230px;
+}
+
+.input-user {
+    width: 230px;
+    padding: 15px 45px 15px 15px;
+    border: 1px solid var(--border-button);
+    outline: none;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    background-color: #000000;
+    color: var(--text);
+    font-size: 1.125rem;
+}
+
+.input-user::placeholder {
+    font-size: 1.125rem;
+}
+
+.search-icon {
+    width: 20px;
+    position: absolute;
+    top: 17px;
+    right: 15px;
+    cursor: pointer;
 }
 
 .button {
@@ -189,4 +221,43 @@ body {
 
 .button img {
     width: 20px;
+}
+
+@media (max-width: 900px) {
+    html,
+    body {
+        height: auto;
+    }
+
+    body {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .card-container {
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .options-container {
+        width: 100%;
+        align-items: center;
+        margin: 20px 0;
+    }
+
+    .share {
+        margin-top: 20px;
+        margin-right: 0;
+    }
+
+    .button:hover {
+        transform: translateY(0);
+        box-shadow: none;
+    }
+
+    .button:active {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 10px 1px rgba(0, 0, 0, 0.5);
+    }
 }
